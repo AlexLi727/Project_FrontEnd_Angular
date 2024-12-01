@@ -1,0 +1,22 @@
+.customHeader {
+    height: 70px;
+}
+
+.customButton {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    padding: 10px;
+    margin: 0px;
+}
+
+.customButton:hover {
+    cursor: pointer;
+    background-color: rgb(49, 49, 49);
+    border-radius: 10px;
+    border-bottom: 2px solid white;
+}
+
+#hospitalimg{
+    width: 100%;
+}
