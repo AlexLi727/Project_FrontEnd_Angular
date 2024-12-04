@@ -1,3 +1,14 @@
+import { Component } from '@angular/core';
 import { Routes } from '@angular/router';
 
-export const routes: Routes = [];
+import { ListNursesComponent } from './list-nurses/list-nurses.component';
+import { LoginComponent } from './login/login.component';
+import { FindByNameComponent } from './find-by-name/find-by-name.component';
+export const routes: Routes = [
+
+    { path: 'list-nurses', component: ListNursesComponent },
+    { path: 'login', component: LoginComponent },
+    { path: '', component:LoginComponent },
+    {path:'#',component:LoginComponent},
+    { path: 'find-by-name', component: FindByNameComponent }
+];
