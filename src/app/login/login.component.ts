@@ -1,6 +1,6 @@
 import { Component, NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -28,7 +28,7 @@ export class LoginComponent {
     let nurse = this.data.find(u => u.name === this.name && u.password === this.password);
 
     if (nurse) {
-      alert("Login correcto");
+      this.router.navigate(['list-nurses']);
     } else {
       alert("Credenciales incorrectos");
     }
