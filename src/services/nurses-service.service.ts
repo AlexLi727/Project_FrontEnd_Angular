@@ -18,5 +18,10 @@ export class NursesServiceService {
       { id: 10, first_name: 'Suellen', last_name: 'Jenkerson' }
     ]
   };
-  constructor() { }
+
+  constructor() {}
+
+  obtenerNurses() {
+    return this.nurses;
+  }
 }
