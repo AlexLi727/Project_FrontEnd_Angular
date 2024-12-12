@@ -1,6 +1,8 @@
 import { Component, NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router, RouterLink, RouterLinkActive } from '@angular/router';
+import { NursesServiceService } from '../../services/nurses-service.service';
+
 
 @Component({
   selector: 'app-login',
@@ -25,12 +27,13 @@ export class LoginComponent {
   constructor(private router: Router) { }
 
   login(): void {
-    let nurse = this.data.find(u => u.name === this.name && u.password === this.password);
+    let nurse = NursesServiceService.nurses.find(u => u.first_name === this.name && u.password === this.password);
 
     if (nurse) {
       this.router.navigate(['list-nurses']);
     } else {
       alert("Credenciales incorrectos");
+      NursesServiceService.nurses.push({"id": 11, "first_name": this.name, "last_name":"dasfasdf", "password": this.password});
     }
 
   };
